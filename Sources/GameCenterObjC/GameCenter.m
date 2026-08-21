@@ -2,7 +2,7 @@
 //  GameCenter.m
 //  v.1.5
 //
-//  Created by Сергей Ваничкин on 02.10.13.
+//  Created by Sergey Vanichkin on 02.10.13.
 //  Copyright © 2013 👽 Technology. All rights reserved.
 //
 //
@@ -24,12 +24,12 @@
 {
 	static dispatch_once_t pred;
 	static GameCenter *shared = nil;
-	
+
 	dispatch_once(&pred, ^
     {
         shared = self.new;
     });
-    
+
     return shared;
 }
 
@@ -181,9 +181,9 @@ withWithLeaderboardIdentifier:(NSString *)identifier
         GKScore *score =
         [GKScore.alloc
          initWithLeaderboardIdentifier:identifier];
-        
+
         score.value = scores.integerValue;
-        
+
         [GKScore
          reportScores:@[score]
          withCompletionHandler:^(NSError *error)
@@ -214,11 +214,11 @@ withWithLeaderboardIdentifier:(NSString *)identifier
                      completion:(Completion        )completion
 {
     GKGameCenterViewController *gameCenterViewController = GKGameCenterViewController.new;
-    
+
     if (gameCenterViewController != nil)
     {
         gameCenterViewController.gameCenterDelegate = self;
-        
+
         [controller
          presentViewController:gameCenterViewController
          animated:YES

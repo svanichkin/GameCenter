@@ -10,7 +10,7 @@ Add the package to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/s-vanichkin/GameCenter.git", from: "1.5.0")
+    .package(url: "https://github.com/svanichkin/GameCenter.git", from: "1.5.0")
 ]
 ```
 

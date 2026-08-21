@@ -10,7 +10,10 @@ let package = Package(
     products: [
         .library(
             name: "GameCenter",
-            targets: ["GameCenter"])
+            targets: ["GameCenter"]),
+        .library(
+            name: "GameCenterObjC",
+            targets: ["GameCenterObjC"])
     ],
     targets: [
         .target(
